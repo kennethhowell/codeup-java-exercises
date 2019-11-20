@@ -1,4 +1,6 @@
+
 public class HelloWorld {
+
     public static void main(String[] args){
 //        System.out.print("Hello,");
 //        System.out.print(" World!");
@@ -8,7 +10,7 @@ public class HelloWorld {
 //        int myFavoriteNumber = 7;
 //        System.out.println(myFavoriteNumber);
 
-//        String myString = "Codeup Exercises!";
+        String myString = "Codeup Exercises!";
 //        System.out.println(myString);
 
 //        float myNumber = 3.14F;
@@ -50,8 +52,10 @@ public class HelloWorld {
 
        byte bitesizeNum = -128;
        System.out.println(--bitesizeNum);
-       short shortNum = -32768;
-       System.out.println(--shortNum);
+//       System.out.println(bitesizeNum - 1);
+//       short shortNum = -32768;
+//       System.out.println(--shortNum);
+//       System.out.println(shortNum - 1);
 
     }
 }
