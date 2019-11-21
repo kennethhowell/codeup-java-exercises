@@ -1,17 +1,19 @@
+import java.util.Scanner;
+//
+//public class HelloWorld {
+//
+//
+//    public static void main(String[] args){
+////        System.out.print("Hello,");
+////        System.out.print(" World!");
+//
+////        System.out.println("Hello, World!");
+//
+////        int myFavoriteNumber = 7;
+////        System.out.println(myFavoriteNumber);
 
-public class HelloWorld {
-
-    public static void main(String[] args){
-//        System.out.print("Hello,");
-//        System.out.print(" World!");
-
-//        System.out.println("Hello, World!");
-
-//        int myFavoriteNumber = 7;
-//        System.out.println(myFavoriteNumber);
-
-        String myString = "Codeup Exercises!";
-//        System.out.println(myString);
+//        String myString = "Codeup Exercises!";
+////        System.out.println(myString);
 
 //        float myNumber = 3.14F;
 //        System.out.println(myNumber);
@@ -50,12 +52,19 @@ public class HelloWorld {
 //        y -= x;
 //        System.out.println(y);
 
-       byte bitesizeNum = -128;
-       System.out.println(--bitesizeNum);
-//       System.out.println(bitesizeNum - 1);
-//       short shortNum = -32768;
-//       System.out.println(--shortNum);
-//       System.out.println(shortNum - 1);
-
-    }
-}
+//       byte bitesizeNum = -128;
+//       System.out.println(--bitesizeNum);
+////       System.out.println(bitesizeNum - 1);
+////       short shortNum = -32768;
+////       System.out.println(--shortNum);
+////       System.out.println(shortNum - 1);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter something :");
+//
+//        String userInput = scanner.next();
+//
+//        System.out.printf("You entered: --> %s <--", userInput);
+//
+//    }
+//}
