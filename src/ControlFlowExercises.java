@@ -39,7 +39,7 @@ public class ControlFlowExercises {
 
 //        TODO: IT'S FIZZBUZZ TIME Y'ALL ~
 
-//        for (int i = 0; i < 100; i++){
+//        for (int i = 0; i <= 100; i++){
 //            if (i % 15 == 0){
 //                System.out.println("Fizzbuzz");
 //            } else if (i % 5 == 0){
