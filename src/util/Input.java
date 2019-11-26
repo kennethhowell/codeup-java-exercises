@@ -6,13 +6,27 @@ public class Input {
 
 
     public static String getString(){
-        System.out.printf("Please enter a string:%n");
+        String returnstring = sc.nextLine();
+        System.out.printf("You've entered the following: %s", returnstring);
+        return returnstring;
+    }
+    public static String getString(String prompt){
+        System.out.printf("%s%n", prompt);
         String returnstring = sc.nextLine();
         System.out.printf("You've entered the following: %s", returnstring);
         return returnstring;
     }
 
+
     public static boolean yesNo(){
+        String userinput = sc.nextLine();
+        if (userinput.equalsIgnoreCase("y") || userinput.equalsIgnoreCase("yes")){
+            return true;
+        } else {
+            return false;
+        }
+    }public static boolean yesNo(String prompt){
+        System.out.printf("%s%n", prompt);
         String userinput = sc.nextLine();
         if (userinput.equalsIgnoreCase("y") || userinput.equalsIgnoreCase("yes")){
             return true;
@@ -37,8 +51,13 @@ public class Input {
     }
 
     public static int getInt(){
-        System.out.printf("Enter a number:%n");
       int input = Integer.parseInt(sc.nextLine());
+        return input;
+    };
+
+    public static int getInt(String prompt){
+        System.out.printf("%s%n", prompt);
+        int input = Integer.parseInt(sc.nextLine());
         return input;
     };
 
@@ -58,6 +77,12 @@ public class Input {
     }
 
     public static double getDouble(){
+        double input = Double.parseDouble(sc.nextLine());
+        return input;
+    };
+
+    public static double getDouble(String prompt){
+        System.out.printf("%s%n", prompt);
         double input = Double.parseDouble(sc.nextLine());
         return input;
     };
