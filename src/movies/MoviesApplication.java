@@ -1,14 +1,20 @@
 package movies;
 import util.Input;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class MoviesApplication {
+//    static Scanner cleansc = new Scanner(System.in);
+
 
     public static void main(String[] args) {
 
         Movie[] mainarray = MoviesArray.findAll();
+        boolean searchmore = true;
+        while (searchmore){
         System.out.printf("What would you like to do?%n0 - exit%n1 - view all movies%n2 - view movies in the animated category%n3 - view movies in the drama category%n4 - view movies in the horror category%n5 - view movies in the scifi category%n");
         int userinput = Input.getInt("Enter your choice:");
-
         switch (userinput) {
             case 0:
                 System.out.printf("Gotcha, adios muchacho!%n");
@@ -51,12 +57,18 @@ public class MoviesApplication {
                     }
                 }
                 break;
-
-
-//        for (int i = 0; i < mainarray.length; i++){
-//            System.out.printf("%s, %s%n", Movie.getName(mainarray[i]), Movie.getCategory(mainarray[i]));
-//        }
+            case 6:
+               String nameStorage = Input.getString("Add a movie? Sure! Give me the name of your movie first:");
+               String categoryStorage = Input.getString("How about what category(genre) you feel fits it best?");
+               Movie usermovie = new Movie(nameStorage, categoryStorage);
+               mainarray = Arrays.copyOf(mainarray, mainarray.length + 1);
+               mainarray[mainarray.length-1] = usermovie;
+               System.out.printf("Alright, we've added %s as a %s movie!%n", Movie.getName(usermovie), Movie.getCategory(usermovie));
+               break;
+        }
+            searchmore = Input.yesNo("Would you like to continue with our Movies application?");
 
         }
+            System.out.printf("Hasta la vista!%n");
     }
 }

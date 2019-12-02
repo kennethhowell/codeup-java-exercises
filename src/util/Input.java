@@ -13,7 +13,6 @@ public class Input {
     public static String getString(String prompt){
         System.out.printf("%s%n", prompt);
         String returnstring = sc.nextLine();
-        System.out.printf("You've entered the following: %s", returnstring);
         return returnstring;
     }
 
@@ -25,7 +24,8 @@ public class Input {
         } else {
             return false;
         }
-    }public static boolean yesNo(String prompt){
+    }
+    public static boolean yesNo(String prompt){
         System.out.printf("%s%n", prompt);
         String userinput = sc.nextLine();
         if (userinput.equalsIgnoreCase("y") || userinput.equalsIgnoreCase("yes")){
