@@ -1,11 +1,8 @@
 package movies;
 import util.Input;
-
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class MoviesApplication {
-//    static Scanner cleansc = new Scanner(System.in);
 
 
     public static void main(String[] args) {
@@ -13,7 +10,7 @@ public class MoviesApplication {
         Movie[] mainarray = MoviesArray.findAll();
         boolean searchmore = true;
         while (searchmore){
-        System.out.printf("What would you like to do?%n0 - exit%n1 - view all movies%n2 - view movies in the animated category%n3 - view movies in the drama category%n4 - view movies in the horror category%n5 - view movies in the scifi category%n");
+        System.out.printf("What would you like to do?%n0 - exit%n1 - view all movies%n2 - view movies in the animated category%n3 - view movies in the drama category%n4 - view movies in the horror category%n5 - view movies in the scifi category%n6 - add a movie of your own in one of the above categories%n");
         int userinput = Input.getInt("Enter your choice:");
         switch (userinput) {
             case 0:
