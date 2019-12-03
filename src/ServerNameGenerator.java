@@ -14,9 +14,6 @@ public class ServerNameGenerator {
     }
 
     public static void main(String[] args) {
-//        System.out.println("getElement(adjectives) = " + getElement(adjectives));
-//        System.out.println("getElement(nouns) = " + getElement(nouns));
-
         System.out.printf("Here is your server name:%n%s-%s", getElement(adjectives), getElement(nouns));
     }
 
