@@ -3,18 +3,18 @@ package shapes;
 public class ShapesTest
 {
     public static void main(String[] args) {
-        Rectangle ricktangle = new Rectangle(5, 4);
-        Rectangle squaredward = new Square(5);
-        Square ricksquangle = new Square(5);
+        Measurable myShape;
+        Measurable myShape2;
 
-        System.out.println("ricktangle.getArea() = " + ricktangle.getArea());
-        System.out.println("ricktangle.getPerimeter() = " + ricktangle.getPerimeter());
+        myShape = new Square(4);
+        myShape2 = new Rectangle(4,5);
 
-        System.out.println("squaredward.getPerimeter() = " + squaredward.getPerimeter());
-        System.out.println("squaredward.getArea() = " + squaredward.getArea());
-
-        System.out.println("ricksquangle.getArea() = " + ricksquangle.getArea());
-        System.out.println("ricksquangle.getPerimeter() = " + ricksquangle.getPerimeter());
+        System.out.printf("Now doing square:%n");
+        System.out.println("myShape.getArea() = " + myShape.getArea());
+        System.out.println("myShape.getPerimeter() = " + myShape.getPerimeter());
+        System.out.printf("Now doing rectangle:%n");
+        System.out.println("myShape2.getArea() = " + myShape2.getArea());
+        System.out.println("myShape2.getPerimeter() = " + myShape2.getPerimeter());
 
 
 //        System.out.println("Rectangle.getPerimeter(ricktangle) = " + Rectangle.getPerimeter(ricktangle));
