@@ -7,7 +7,6 @@ public class Input {
 
     public static String getString(){
         String returnstring = sc.nextLine();
-        System.out.printf("You've entered the following: %s", returnstring);
         return returnstring;
     }
     public static String getString(String prompt){
