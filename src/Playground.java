@@ -1,4 +1,5 @@
-import java.util.HashMap;
+import java.sql.SQLOutput;
+import java.util.*;
 
 
 public class Playground
@@ -7,6 +8,24 @@ public class Playground
 
         return "wurst";
     }
+
+//    take keys from hashmap, put into arraylist, sort arraylist, use arraylist to pull values associated with sorted key
+
+public static void hashMapSort(HashMap input){
+    Set keys = input.keySet();
+    int i = keys.size();
+    ArrayList<String> sortedkeys = new ArrayList<>(i);
+    sortedkeys.addAll(keys);
+    Collections.sort(sortedkeys);
+    System.out.println("sortedkeys = " + sortedkeys);
+    for (String item : sortedkeys){
+        System.out.printf(input +"%nItem: %s | Quantity: " + input.get(item)+"%n", item);
+    }
+
+};
+
+
+
     public static void setHashMap(HashMap category, String name, int quantity){
         category.put(name, quantity);
     };
@@ -36,8 +55,10 @@ public class Playground
         setHashMap(dairy, "laser yogurt", 4);
         setHashMap(dairy, "super butter", 2);
 
-        setHashMap(produce, "zucchini", 3);
-        setHashMap(produce, "tomatoes", 4);
+        hashMapSort(dairy);
+
+//        setHashMap(produce, "zucchini", 3);
+//        setHashMap(produce, "tomatoes", 4);
 //
 //        produce.put("zucchini", 4);
 //        produce.put("oranges", 4);
@@ -52,7 +73,7 @@ public class Playground
 //        System.out.println(dairy.keySet());
 //        System.out.println(dairy.values());
 
-        System.out.println(produce.entrySet());
+//        System.out.println(produce.entrySet());
 //        for (String item : dairy.keySet()){
 //            System.out.printf("%s%n",item);
 //        }
