@@ -18,6 +18,19 @@ public class InputTest {
 
 //        double userdouble = Input.getDouble("Pass me a floating point number, bud.");
 //        System.out.println("userdouble = " + userdouble);
+
+//        try {
+//            Integer.valueOf("dog");
+//
+//        } catch (Exception e) {
+//            System.out.printf("Oof oof oof?");
+//        }
+
+        int test = Input.getInt("Pass me a number, bud!");
+
+        System.out.println("test = " + test);
+
+//        System.out.println("Integer.valueOf(\"dog\") = " + Integer.valueOf("dog"));
 //
 
     }
