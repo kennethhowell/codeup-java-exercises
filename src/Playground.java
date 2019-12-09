@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.SQLOutput;
 import java.util.*;
 
@@ -31,7 +35,7 @@ public static void hashMapSort(HashMap input){
     };
 
     public static void main(String[] args) {
-        String cate = "dairy";
+//        String cate = "dairy";
 
 //        ;
 //        if (cate.equalsIgnoreCase("dairy")){
@@ -44,18 +48,18 @@ public static void hashMapSort(HashMap input){
 //        };
 
 
-        HashMap<String, Integer> dairy = new HashMap<>();
-        HashMap<String, Integer> produce = new HashMap<>();
-        HashMap<String, Integer> meats = new HashMap<>();
-
-//        dairy.put("two percent milk", 3);
-//        dairy.put("sourcream", 2);
-//        dairy.put("yogurt", 6);
-        setHashMap(dairy, "two percent milk", 6);
-        setHashMap(dairy, "laser yogurt", 4);
-        setHashMap(dairy, "super butter", 2);
-
-        hashMapSort(dairy);
+//        HashMap<String, Integer> dairy = new HashMap<>();
+//        HashMap<String, Integer> produce = new HashMap<>();
+//        HashMap<String, Integer> meats = new HashMap<>();
+//
+////        dairy.put("two percent milk", 3);
+////        dairy.put("sourcream", 2);
+////        dairy.put("yogurt", 6);
+//        setHashMap(dairy, "two percent milk", 6);
+//        setHashMap(dairy, "laser yogurt", 4);
+//        setHashMap(dairy, "super butter", 2);
+//
+//        hashMapSort(dairy);
 
 //        setHashMap(produce, "zucchini", 3);
 //        setHashMap(produce, "tomatoes", 4);
@@ -69,7 +73,7 @@ public static void hashMapSort(HashMap input){
 //        meats.put("chicken thighs", 2);
 
 
-        System.out.println(dairy.entrySet());
+//        System.out.println(dairy.entrySet());
 //        System.out.println(dairy.keySet());
 //        System.out.println(dairy.values());
 
@@ -81,14 +85,51 @@ public static void hashMapSort(HashMap input){
 //            System.out.printf("%s%n",item);
 //        }
 //        for (String item : meats.keySet()){
+        final  String dir = "data";
+        final  String fileName = "playground.txt";
+
+        Path path = Paths.get(dir, fileName);
+
+//         if FILE DOES NOT EXIST AT PATH, try CREATEFILE@PATH, CATCH IOEXCEPTION
+
+        if (!Files.exists(path)){
+            try {
+                Files.createDirectories(Paths.get(dir));
+                Files.createFile(Paths.get(fileName));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        List<String> playgroundList = new ArrayList<>();
+
+        playgroundList.add("slide");
+        playgroundList.add("merry-go-round");
+        playgroundList.add("tether-ball");
+
+        try {
+            Files.write(path, playgroundList);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        try {
+            List<String> playgroundLines = Files.readAllLines(path);
+            for (String playgroundItems : playgroundLines){
+                System.out.println("playgroundItems = " + playgroundItems);
+            }
+            System.out.println("Files.readAllLines(path) = " + Files.readAllLines(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 //            System.out.printf("%s%n",item);
 //        }
     }
 
 
 
-
-//    public item(String category String item, int quanttity)
+    //    public item(String category String item, int quanttity)
 //
 //    public static void main(String[] args) {
 //        int x = 5 * 4 % 3;
