@@ -30,24 +30,29 @@ public class Student {
 
     }
 
-//    public static void main(String[] args) {
-//        Student ken = new Student("ken");
-//        Student thomas = new Student("thomas");
-//
-//        ken.addGrade(95);
-//        ken.addGrade(85);
-//        ken.addGrade(75);
-//        ken.addGrade(65);
-//
-//        thomas.addGrade(99);
-//        thomas.addGrade(89);
-//        thomas.addGrade(79);
-//        thomas.addGrade(69);
-//
-//        System.out.println("thomas.getGradeAverage() = " + thomas.getGradeAverage());
-//        System.out.println("ken.getGradeAverage() = " + ken.getGradeAverage());
-//
-//
-//    }
 
-}
+;public static String LetterChanges(String input){
+        char [] inputCharAray = input.toCharArray();
+        String outputString = "";
+
+        for (char character : inputCharAray){
+            if (character == 'a'){
+                outputString += 'b';
+            } else if (character == 'b'){
+                outputString += 'c';
+            } else if (character == 'd'){
+                outputString += 'd';
+            }
+        }
+        return outputString;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("LetterChanges(\"aaaaaaaa\") = " + LetterChanges("aaaaaaaa"));
+
+
+    }
+
+};
+
+
