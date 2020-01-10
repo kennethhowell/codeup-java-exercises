@@ -34,98 +34,98 @@ public static void hashMapSort(HashMap input){
         category.put(name, quantity);
     };
 
-    public static void main(String[] args) {
-//        String cate = "dairy";
-
-//        ;
-//        if (cate.equalsIgnoreCase("dairy")){
-//            dairy.put(variable, variable2);
-//        };
-
-
-//        public static void setHashMap(String category, String name, int quantity){
-//            category.put(name, quantity);
-//        };
-
-
-//        HashMap<String, Integer> dairy = new HashMap<>();
-//        HashMap<String, Integer> produce = new HashMap<>();
-//        HashMap<String, Integer> meats = new HashMap<>();
+//    public static void main(String[] args) {
+////        String cate = "dairy";
 //
-////        dairy.put("two percent milk", 3);
-////        dairy.put("sourcream", 2);
-////        dairy.put("yogurt", 6);
-//        setHashMap(dairy, "two percent milk", 6);
-//        setHashMap(dairy, "laser yogurt", 4);
-//        setHashMap(dairy, "super butter", 2);
+////        ;
+////        if (cate.equalsIgnoreCase("dairy")){
+////            dairy.put(variable, variable2);
+////        };
 //
-//        hashMapSort(dairy);
-
-//        setHashMap(produce, "zucchini", 3);
-//        setHashMap(produce, "tomatoes", 4);
 //
-//        produce.put("zucchini", 4);
-//        produce.put("oranges", 4);
-//        produce.put("onions", 4);
+////        public static void setHashMap(String category, String name, int quantity){
+////            category.put(name, quantity);
+////        };
 //
-//        meats.put("redeye steak", 2);
-//        meats.put("steak", 2);
-//        meats.put("chicken thighs", 2);
-
-
-//        System.out.println(dairy.entrySet());
-//        System.out.println(dairy.keySet());
-//        System.out.println(dairy.values());
-
-//        System.out.println(produce.entrySet());
-//        for (String item : dairy.keySet()){
-//            System.out.printf("%s%n",item);
+//
+////        HashMap<String, Integer> dairy = new HashMap<>();
+////        HashMap<String, Integer> produce = new HashMap<>();
+////        HashMap<String, Integer> meats = new HashMap<>();
+////
+//////        dairy.put("two percent milk", 3);
+//////        dairy.put("sourcream", 2);
+//////        dairy.put("yogurt", 6);
+////        setHashMap(dairy, "two percent milk", 6);
+////        setHashMap(dairy, "laser yogurt", 4);
+////        setHashMap(dairy, "super butter", 2);
+////
+////        hashMapSort(dairy);
+//
+////        setHashMap(produce, "zucchini", 3);
+////        setHashMap(produce, "tomatoes", 4);
+////
+////        produce.put("zucchini", 4);
+////        produce.put("oranges", 4);
+////        produce.put("onions", 4);
+////
+////        meats.put("redeye steak", 2);
+////        meats.put("steak", 2);
+////        meats.put("chicken thighs", 2);
+//
+//
+////        System.out.println(dairy.entrySet());
+////        System.out.println(dairy.keySet());
+////        System.out.println(dairy.values());
+//
+////        System.out.println(produce.entrySet());
+////        for (String item : dairy.keySet()){
+////            System.out.printf("%s%n",item);
+////        }
+////        for (String item : produce.keySet()){
+////            System.out.printf("%s%n",item);
+////        }
+////        for (String item : meats.keySet()){
+//        final  String dir = "data";
+//        final  String fileName = "playground.txt";
+//
+//        Path path = Paths.get(dir, fileName);
+//
+////         if FILE DOES NOT EXIST AT PATH, try CREATEFILE@PATH, CATCH IOEXCEPTION
+//
+//        if (!Files.exists(path)){
+//            try {
+//                Files.createDirectories(Paths.get(dir));
+//                Files.createFile(Paths.get(fileName));
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 //        }
-//        for (String item : produce.keySet()){
-//            System.out.printf("%s%n",item);
+//
+//        List<String> playgroundList = new ArrayList<>();
+//
+//        playgroundList.add("slide");
+//        playgroundList.add("merry-go-round");
+//        playgroundList.add("tether-ball");
+//
+//        try {
+//            Files.write(path, playgroundList);
+//        } catch (IOException e){
+//            e.printStackTrace();
 //        }
-//        for (String item : meats.keySet()){
-        final  String dir = "data";
-        final  String fileName = "playground.txt";
-
-        Path path = Paths.get(dir, fileName);
-
-//         if FILE DOES NOT EXIST AT PATH, try CREATEFILE@PATH, CATCH IOEXCEPTION
-
-        if (!Files.exists(path)){
-            try {
-                Files.createDirectories(Paths.get(dir));
-                Files.createFile(Paths.get(fileName));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-        List<String> playgroundList = new ArrayList<>();
-
-        playgroundList.add("slide");
-        playgroundList.add("merry-go-round");
-        playgroundList.add("tether-ball");
-
-        try {
-            Files.write(path, playgroundList);
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-
-        try {
-            List<String> playgroundLines = Files.readAllLines(path);
-            for (String playgroundItems : playgroundLines){
-                System.out.println("playgroundItems = " + playgroundItems);
-            }
-            System.out.println("Files.readAllLines(path) = " + Files.readAllLines(path));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-//            System.out.printf("%s%n",item);
+//
+//        try {
+//            List<String> playgroundLines = Files.readAllLines(path);
+//            for (String playgroundItems : playgroundLines){
+//                System.out.println("playgroundItems = " + playgroundItems);
+//            }
+//            System.out.println("Files.readAllLines(path) = " + Files.readAllLines(path));
+//        } catch (IOException e) {
+//            e.printStackTrace();
 //        }
-    }
+//
+////            System.out.printf("%s%n",item);
+////        }
+//    }
 
 
 
@@ -136,6 +136,40 @@ public static void hashMapSort(HashMap input){
 //        System.out.println(x);
 //
 //        System.out.println("This is what x is" + x);
+
+
+    public static int SimpleAdding(int input){
+        int bucket = 0;
+        for (int x = input; x!=0; x--){
+            bucket += x;
+        }
+        return bucket;
+    }
+
+
+
+    public static Double calcPower(Double base, Double exponent){
+        if (exponent <= 0){
+            return 1.00;
+        }
+        Double bucketReturn = 1.00;
+        for (double x = exponent; x!= 0; x--){
+            bucketReturn *= base;
+        }
+        return bucketReturn;
+    }
+
+    public static void main(String[] args) {
+//        System.out.println("SimpleAdding(4) = " + SimpleAdding(10));
+//        System.out.println("SimpleAdding(4) = " + SimpleAdding(12));
+//        System.out.println("SimpleAdding(4) = " + SimpleAdding(140));
+
+//        System.out.println("calcPower(2.00,2.00) = " + calcPower(2.00, 2.00));
+//        System.out.println("calcPower(2.00,1.00) = " + calcPower(2.00, 1.00));
+//        System.out.println("calcPower(4.00,6.00) = " + calcPower(4.00, 6.00));
+        System.out.println("calcPower(4.00,6.00) = " + calcPower(4.00, 0.00));
+
+    }
     }
 
 
